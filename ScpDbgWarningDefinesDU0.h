@@ -407,9 +407,9 @@ Warning Description ID Defines
 #define WID0_383   DU0|383,FLDSSTR /*! Erasing CAN Capture Pages. */
 #define WID0_384   DU0|384,FLDS2(TS32,TS32) /*! CurPge: %u,Pge Cnt: %u */
 #define WID0_385   DU0|385,FLDS5(TS32,TS32,TS32,TS32,TS32) /*! Ste: %u, Idx: %u Pge: %u rpp: %u bpgs:%u */
-#define WID0_386   DU0|386,FLDSSTR /*! Req Start */
-#define WID0_387   DU0|387,FLDSSTR /*! Req End */
-#define WID0_388   DU0|388,FLDS2(TS32,TS32) /*! UPLOAD RDY: SP:%u EP:%u */
+#define WID0_386   DU0|386,FLDSSTR /*! Req Start Page*/
+#define WID0_387   DU0|387,FLDSSTR /*! Req End Page*/
+#define WID0_388   DU0|388,FLDS2(TS32,TS32) /*! UPLOAD READY: Start Page:%u End Page:%u */
 #define WID0_389   DU0|389,FLDS2(TS32,TS32) /*! VNI CAP UPLOAD %u %u */
 #define WID0_390   DU0|390,FLDS2(TS32,TS32) /*! CDC FTP Upld: %u, %u */
 #define WID0_391   DU0|391,FLDS1(TS32) /*! Clr Filt:%u */
@@ -1247,6 +1247,7 @@ Warning Description ID Defines
 #define WID0_1223   DU0|1223,FLDS4(TU32,TU32,TU32,TU32) /*! F:%d L:%d, F:%d L:%d */
 #define WID0_1224   DU0|1224,FLDS4(TU32,TU32,TU32,TU32) /*! MEM GLOBAL: %d NV: %d ETH: %d USB: %d */
 #define WID0_1225   DU0|1225,FLDS2(TU32,TU32) /*! BURST ACC: %d ADC: %d */
+#define WID0_1226   DU0|1226,FLDS2(TU8,TU16) /*! OW TEMP BAD: Sensor %u: Value: %d */
 //</WARNING_IDS>
  
 #endif // SCP_DBGWARNINGDEFINESDU0_H

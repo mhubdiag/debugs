@@ -1419,7 +1419,7 @@ Info Description ID Defines
 #define IID0_1395   DU0|1395,FLDSSTR /*! Server Time: Update */
 #define IID0_1396   DU0|1396,FLDSSTR /*! Server Time Cal */
 #define IID0_1397   DU0|1397,FLDS7E(TU32,TSTR,TSTR,TU32,TU32,TU32,TU32),FLDS3(TU32,TU32,TU32) /*! PHY SKT STATE:%u | SOCKET %s,%s | LOGIN State %u | Login T: %u | Rx T: %u | Session Time: %u | Block Time: %u | Suspend Period: %u | Suspend Time: %u */
-#define IID0_1398   DU0|1398,FLDS7E(TU32,TU32,TU32,TU32,TU32,TU32,TU32),FLDS2(TU32,TU32) /*! REP Time: %u | DATA Time: %u | NOTE Time: %u | REP Status: %u | DATA Status: %u | NOTE Status: %u |  Login Timer: %lu | Best Time: %lu | Time Since Last Login: %u */
+#define IID0_1398   DU0|1398,FLDS7E(TU32,TU32,TU32,TU32,TU32,TU32,TU32),FLDS2(TU32,TU32) /*! REP Time: %u | DATA Time: %u | NOTE Time: %u | REP Status: %u | DATA Status: %u | NOTE Status: %u |  Login Timer: %u | Best Time: %u | Time Since Last Login: %u */
 #define IID0_1399   DU0|1399,FLDS2(TU32,TU32) /*! SERIAL: In %u | Out %u || */
 #define IID0_1400   DU0|1400,FLDS7E(TU32,TSTR,TSTR,TU32,TU32,TU32,TU32),FLDS5(TU32,TU32,TU32,TU32,TU32) /*! SKT STATE:%u | SOCKET %s,%s | LOGIN State %u | Login T: %u | Rx T: %u | Session Time: %u | Block Time: %u | Suspend Period: %u | Suspend Time: %u |  Login Timer: %lu | Best Time: %lu */
 #define IID0_1401   DU0|1401,FLDS6(TU32,TSTR,TSTR,TU32,TU32,TU32) /*! SKT STATE:%u | SOCKET %s,%s | Manager State %u | Request Timer: %u | Request Start: %u |  */
@@ -1528,6 +1528,7 @@ Info Description ID Defines
 #define IID0_1504   DU0|1504,FLDS1(TSTR) /*! %s */
 #define IID0_1505   DU0|1505,FLDSSTR /*! Time Valid */
 #define IID0_1506   DU0|1506,FLDS6(TU32,TU32,TU32,TU32,TU32,TU32) /*! Stack: M:%d C:%d S:%d Heap: %d TMax: %d CPU: %d  */
+#define IID0_1507   DU0|1507,FLDS2(TU8,TU16) /*! OW TEMP GOOD: Sensor %u: Value: %d */
 //</INFO_IDS>
  
 #endif // SCP_DBGINFODEFINESDU0_H

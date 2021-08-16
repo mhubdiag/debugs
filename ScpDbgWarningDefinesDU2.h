@@ -37,6 +37,18 @@ Warning Description ID Defines
 #define WID2_13   DU2|13,FLDSTR /*! Modem not on, vectoring to Power On Prep */
 #define WID2_14   DU2|14,FLDSTR /*! Modem Power Detected */
 #define WID2_15   DU2|15,FLDS1(TS32) /*! GNSS Power Status: %d */
+#define WID2_16   DU2|16,FLDS2(TU8,TU32) /*! Checksum: %02X Length:  %u */
+#define WID2_17   DU2|17,FLDS1(TU32) /*! EPO: GPS Aid Expired for %us Triggering Download */
+#define WID2_18   DU2|18,FLDSTR /*! No valid EPO data on GPS */
+#define WID2_19   DU2|19,FLDS2(TU32,TU32) /*! File Size: %u; File Count: %u */
+#define WID2_20   DU2|20,FLDSTR /*! FILE NOT FOUND */
+#define WID2_21   DU2|21,FLDS3(TU32,TU32,TU32) /*! File Readout Complete: %u of %u, Aborted: %u */
+#define WID2_22   DU2|22,FLDSTR /*! Using SET READ POSITION */
+#define WID2_23   DU2|23,FLDS1(TSTR) /*! GPS Jamming : %s */
+#define WID2_24   DU2|24,FLDSTR /*! GPS JAMMING: NONE */
+#define WID2_25   DU2|25,FLDSTR /*! GPS JAMMING: WARNING */
+#define WID2_26   DU2|26,FLDSTR /*! GPS JAMMING: CRITICAL */
+#define WID2_27   DU2|1,FLDSTR /*! CRITICAL ERROR: SIM PUK'd. No more pin attempts remaining */
 //</WARNING_IDS>
  
 #endif // SCP_DBGWARNINGDEFINESDU2_H

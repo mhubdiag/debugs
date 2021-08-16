@@ -22,7 +22,7 @@ Error Description ID Defines
 //<ERROR_IDS>
 // Error Debugs for User 1
 #define EID1_0  DU1|0,FLDSSTR /*! Undefined */  
+#define EID1_1   DU1|1,FLDSTR /*! RAM Geofence Erased or Corrupt */
 //</ERROR_IDS>
  
-#endif // SCP_DBGERRORDEFINESDU1_H
-
+#endif // SCP_DBGERRORDEFINESDUDU1_H
