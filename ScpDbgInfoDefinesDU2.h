@@ -28,6 +28,8 @@ Info Description ID Defines
 #define IID2_4   DU2|4,FLDSTR /*! <_<string>_> */
 #define IID2_5   DU2|5,FLDSTR /*! EPO Download Complete */
 #define IID2_6   DU2|6,FLDSTR /*! Web Download Complete */
+#define IID2_7   DU2|7,FLDS1(TU32) /*! Remaining Buffer Space: %u */
+#define IID2_8   DU2|8,FLDS2(TU32,TU32) /*! Write Pos: %u  Written: %u */
 //</INFO_IDS>
  
 #endif // SCP_DBGINFODEFINESDU2_H

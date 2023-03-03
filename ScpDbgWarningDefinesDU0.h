@@ -82,7 +82,7 @@ Warning Description ID Defines
 #define WID0_58   DU0|58,FLDS7(TS32,TS32,TS32,TS32,TS32,TS32,TS32) /*! BLESW: Event: FA[0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X] silent for %d s */
 #define WID0_59   DU0|59,FLDS7(TS32,TS32,TS32,TS32,TS32,TS32,TS32) /*! BLESW: Event: MA[0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X] silent for %d s */
 #define WID0_60   DU0|60,FLDS7(TS32,TS32,TS32,TS32,TS32,TS32,TS32) /*! BLESW: Event: QA[0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X] silent for %d s */
-#define WID0_61   DU0|61,FLDS7(TS32,TS32,TS32,TS32,TS32,TS32,TS32) /*! BLESW: Event: AT Dev[0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X0x%0.2X] silent for %d s */
+#define WID0_61   DU0|61,FLDS7(TS32,TS32,TS32,TS32,TS32,TS32,TS32) /*! BLESW: Event: AT Dev[%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X] silent for %d s */
 #define WID0_62   DU0|62,FLDS2(TSTR,TS32) /*! BLESW: Event: MA[%s] moved away (RSSI=%d) */
 #define WID0_63   DU0|63,FLDS1(TS32) /*! BLESW: F[%d] -x- TL Full */
 #define WID0_64   DU0|64,FLDSSTR /*! Immediate SMS Fallback */

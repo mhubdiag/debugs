@@ -23,6 +23,7 @@ Error Description ID Defines
 // Error Debugs for User 1
 #define EID1_0  DU1|0,FLDSSTR /*! Undefined */  
 #define EID1_1   DU1|1,FLDSTR /*! RAM Geofence Erased or Corrupt */
+#define EID1_2   DU1|2,FLDS3(TS32,TU32,TS32) /*! FS: Writing outside file boundaries: File %d, Address: %X, DataLen: %d */
 //</ERROR_IDS>
  
 #endif // SCP_DBGERRORDEFINESDUDU1_H

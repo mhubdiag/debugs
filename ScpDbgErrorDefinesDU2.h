@@ -23,7 +23,7 @@ Error Description ID Defines
 // Error Debugs for User 2
 #define EID2_0  DU2|0,FLDSSTR /*! Undefined */  
 #define EID2_1   DU2|1,FLDS1(TU32) /*! UNKWN READ STATE: %u */
-#define EID2_2   DU2|2,FLDS2(TU32,TU32) /*! No Data Channel: %u Len: %u */
+#define EID2_2   DU2|2,FLDS2(TU32,TU32) /*! No Data remaining. Channel: %u Len: %u */
 #define EID2_3   DU2|3,FLDS2(TU32,TS32) /*! Modem Application Error at state: %u. Error %d */
 #define EID2_4   DU2|4,FLDS1(TU32) /*! Queclocator Failure. Standing off */
 #define EID2_5   DU2|5,FLDSTR /*! CRITICAL: Modem NOT RECOGNISED */
@@ -41,6 +41,10 @@ Error Description ID Defines
 #define EID2_17   DU2|4,FLDSTR /*! INPUT C not Configured */
 #define EID2_18   DU2|5,FLDSTR /*! INPUT D not Configured */
 #define EID2_19   DU2|19,FLDSTR /*! INPUT E not configured */
+#define EID2_20   DU2|20,FLDS1(TU32) /*! Remaining length is not factor of 2:. len: %u */
+#define EID2_21   DU2|21,FLDSSTR /*! FTP: Max download attempts exceeded */
+#define EID2_22   DU2|22,FLDS2(TU16,TU16) /*! CRC Check Failure: Flash:%04X, Data: %04X */
+#define EID2_23   DU2|23,FLDSSTR /*! FTP Data Overflow */
 //</ERROR_IDS>
  
 #endif // SCP_DBGERRORDEFINESDUDU2_H

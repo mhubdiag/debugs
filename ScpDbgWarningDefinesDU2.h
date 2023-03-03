@@ -49,6 +49,13 @@ Warning Description ID Defines
 #define WID2_25   DU2|25,FLDSTR /*! GPS JAMMING: WARNING */
 #define WID2_26   DU2|26,FLDSTR /*! GPS JAMMING: CRITICAL */
 #define WID2_27   DU2|1,FLDSTR /*! CRITICAL ERROR: SIM PUK'd. No more pin attempts remaining */
+#define WID2_28   DU2|28,FLDS4(TU32,TU32,TU32,TU32) /*! Current:%u, Voltage:%u, Power:%u, Total Energy:%u */
+#define WID2_29   DU2|29,FLDS1(TU32) /*! Data Capture Started for %u hours */
+#define WID2_30   DU2|30,FLDS3(TU32,TU32,TU32) /*! File Readout Complete: %u of %u :  ABORT: %u */
+#define WID2_31   DU2|31,FLDS1(TU32) /*! File PROCESSING FAILURE: %u */
+#define WID2_32   DU2|32,FLDS1(TU32) /*! File Readout FAILURE: %u */
+#define WID2_33   DU2|33,FLDS3(TU32,TU16,TU16) /*! Page Index: %u, Flash CRC: %04X : Data CRC: %04X */
+#define WID2_34   DU2|34,FLDS1(TSTR) /*! File Name: %s */
 //</WARNING_IDS>
  
 #endif // SCP_DBGWARNINGDEFINESDU2_H

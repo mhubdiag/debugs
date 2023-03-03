@@ -22,9 +22,9 @@ Info Description ID Defines
 //<INFO_IDS>
 // Info Debugs for Legacy User
 #define IID0_0    DU0|0,FLDSSTR /*! Undefined */  
-#define IID0_1    DU0|1,FLDS1(TU16) /*! Init BitBuffer at Page %d */
-#define IID0_2    DU0|2,FLDS1(TU16) /*! BitBuffer at Page %d not formatted yet */
-#define IID0_3    DU0|3,FLDS1(TU16) /*! BitBuffer at Page %d flushed */
+#define IID0_1    DU0|1,FLDS1(TU16) /*! Init BitBuffer in File %d */
+#define IID0_2    DU0|2,FLDS1(TU16) /*! BitBuffer in File %d not formatted yet */
+#define IID0_3    DU0|3,FLDS1(TU16) /*! BitBuffer in File %d flushed */
 #define IID0_4    DU0|4,FLDS1(TU16) /*! BitBuffer %d wrapped */
 #define IID0_5    DU0|5,FLDS2(TU16,TS32) /*! BitBuffer %d Count = %d */
 #define IID0_6    DU0|6,FLDS1(TU16) /*! BitBuffer %d wrapped */
@@ -113,7 +113,7 @@ Info Description ID Defines
 #define IID0_89   DU0|89,FLDS2(TS32,TS32) /*! CalcCRC: 0x%0.2X ARCRC: 0x%0.2X */
 #define IID0_90   DU0|90,FLDSSTR /*! UPDATING AR STRUCTURE */
 #define IID0_91   DU0|91,FLDSSTR /*! AR Structure Blank, Writing Defaults and skipping integrity check */
-#define IID0_92   DU0|92,FLDS5(TS32,TS32,TS32,TS32,TS32) /*! Page Size: %d, NrPg: %d, NrRec: %d, NrBit: %d, TotRec: %d */
+#define IID0_92   DU0|92,FLDS6(TS32,TS32,TS32,TS32,TS32,TS32) /*! Page Size: %d, NrPg: %d, NrRec: %d, NrBit: %d, TotRec: %d, RecIdx: %d */
 #define IID0_93   DU0|93,FLDS2(TS32,TS32) /*! PgIdx: %d RecIdx: %d */
 #define IID0_94   DU0|94,FLDSSTR /*! Non Trip AR Record */
 #define IID0_95   DU0|95,FLDS2(TS32,TS32) /*! PageAddr: %d PageOff: %d */
@@ -273,9 +273,9 @@ Info Description ID Defines
 #define IID0_249   DU0|249,FLDSSTR /*! BLESW: Load Device List into RAM */
 #define IID0_250   DU0|250,FLDS2(TS32,TS32) /*! BLESW: TL[%d] = F[%d] */
 #define IID0_251   DU0|251,FLDS2(TS32,TS32) /*! BLESW: TL[%d] x F[%d] */
-#define IID0_252   DU0|252,FLDS1(TS32) /*! ScpCMFindEvent = %d */
+#define IID0_252   DU0|252,FLDS2(TS32,TS32) /*! ScpCMFindEvent for Medium[%d] = %d */
 #define IID0_253   DU0|253,FLDS1(TS32) /*! ScpCMFindEvent = %d */
-#define IID0_254   DU0|254,FLDS2(TS32,TS32) /*! Event ID: %d added; %d in packet */
+#define IID0_254   DU0|254,FLDS2(TS32,TS32) /*! Event Payload Full, Last added Index: %d; %d in packet */
 #define IID0_255   DU0|255,FLDS2(TS32,TS32) /*! Pages HP: %d NP: %d */
 #define IID0_256   DU0|256,FLDS4(TS32,TS32,TS32,TS32) /*! Event Count: %d, Tail: %d,EvtIdx: %d, lastIdx: %d */
 #define IID0_257   DU0|257,FLDS1(TS32) /*! NP Events: %d Queued */
@@ -283,7 +283,7 @@ Info Description ID Defines
 #define IID0_259   DU0|259,FLDS3(TS32,TS32,TS32) /*! Event Count: %d, Tail: %d, lastIdx: %d */
 #define IID0_260   DU0|260,FLDS1(TS32) /*! HP Events: %d Queued */
 #define IID0_261   DU0|261,FLDS1(TS32) /*! HP Events: %d Not Queued */
-#define IID0_262   DU0|262,FLDS7E(TS32,TS32,TS32,TS32,TS32,TS32,TS32), FLDS2(TS32,TS32) /*! [SMS: T = %d, H = %d, HP = %d],[GPRS: T = %d, H = %d, HP = %d], [IRIDIUM: T = %d, H = %d, HP = %d] */
+#define IID0_262   DU0|262,FLDS7E(TS32,TS32,TS32,TS32,TS32,TS32,TS32), FLDS2(TS32,TS32) /*! [SMS: %d -> %d, %d HP],[GPRS: %d -> %d, %d HP], [IRIDIUM: %d -> %d, %d HP] */
 #define IID0_263   DU0|263,FLDS2(TS32,TS32) /*! Count= %d, StartIdx = %d */
 #define IID0_264   DU0|264,FLDS2(TS32,TS32) /*! CFG CRC: 0x%0.4X CALC: 0x%0.4X */
 #define IID0_265   DU0|265,FLDSSTR /*! Check if Status Section need to be persisted */
@@ -416,7 +416,7 @@ Info Description ID Defines
 #define IID0_392   DU0|392,FLDS2(TS32,TS32) /*! sectorNumber = %d, IntSectorAddress = %d */
 #define IID0_393   DU0|393,FLDS1(TS32) /*! DF INT:%d */
 #define IID0_394   DU0|394,FLDS3(TS32,TS32,TS32) /*! WLP RECORDS: %d BITS: %d Index: %d */
-#define IID0_395   DU0|395,FLDS2(TS32,TS32) /*! WLP Buffer at Addr: %d Page:%d flushed */
+#define IID0_395   DU0|395,FLDS2(TS32,TS32) /*! WLP: File Handle: %d flushed %d times */
 #define IID0_396   DU0|396,FLDS1(TS32) /*! WLP Write Index: %d */
 #define IID0_397   DU0|397,FLDS1(TS32) /*! DS: Msg Sent OK, Msg Idx = %d */
 #define IID0_398   DU0|398,FLDS1(TS32) /*! DS: Msg Sent OK, Msg Idx = %d */
@@ -474,7 +474,7 @@ Info Description ID Defines
 #define IID0_450   DU0|450,FLDS1(TS32) /*! ScpEnc: ret = %d */
 #define IID0_451   DU0|451,FLDSSTR /*! Event Generation Bypassed, Start-up or Self Test Running */
 #define IID0_452   DU0|452,FLDSSTR /*! Event Generation Bypassed, Start-up or Self Test Running */
-#define IID0_453   DU0|453,FLDS5(TS32,TS32,TS32,TS32,TS32) /*! Evt: evtIdx: %d, actualIdx: %d, pageAddr: %d, pageOffs: %d, total: %d  */
+#define IID0_453   DU0|453,FLDS3(TS32,TS32,TS32) /*! Evt: Current: Idx=%d, Next: Idx=%d, Total=%d */
 #define IID0_454   DU0|454,FLDS2(TS32,TS32) /*! Evt: Write Page: %d Index: %d  */
 #define IID0_455   DU0|455,FLDS1(TS32) /*! Evt: Erased Sector: %d */
 #define IID0_456   DU0|456,FLDS1(TS32) /*! Evt: Erased Page: %d */
@@ -837,7 +837,7 @@ Info Description ID Defines
 #define IID0_813   DU0|813,FLDS1(TU32) /*! Found Current Write Index: %u */
 #define IID0_814   DU0|814,FLDS1(TU32) /*! Loading Page: %u */
 #define IID0_815   DU0|815,FLDS3(TU32,TU32,TU32) /*! In-Page Index: %u; FlashEntrySize %u paramrec: %u */
-#define IID0_816   DU0|816,FLDS1(TU32) /*! Written Page: %u */
+#define IID0_816   DU0|816,FLDS1(TU32) /*! Written Index: %u */
 #define IID0_817   DU0|817,FLDS1(TU32) /*! Length: %u */
 #define IID0_818   DU0|818,FLDS1(TU32) /*! RecStrcVer: %u */
 #define IID0_819   DU0|819,FLDS1(TU32) /*! Par Inf Type: %u */
@@ -1529,6 +1529,7 @@ Info Description ID Defines
 #define IID0_1505   DU0|1505,FLDSSTR /*! Time Valid */
 #define IID0_1506   DU0|1506,FLDS6(TU32,TU32,TU32,TU32,TU32,TU32) /*! Stack: M:%d C:%d S:%d Heap: %d TMax: %d CPU: %d  */
 #define IID0_1507   DU0|1507,FLDS2(TU8,TU16) /*! OW TEMP GOOD: Sensor %u: Value: %d */
+#define IID0_1508   DU0|1508,FLDS2(TSTR,TSTR) /*! %s, %s */
 //</INFO_IDS>
  
 #endif // SCP_DBGINFODEFINESDU0_H

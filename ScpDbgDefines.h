@@ -45,7 +45,7 @@ File Number Defines
 ****************************************************************************/
 //<FILENUMBERS>
 #define SCP_FILEUNDEFINED     0     /*! Undefined */
-#define SCP_TWI_1WIRE         1     /*! 1 Wire */
+#define SCP_1WIRE             1     /*! 1 Wire */
 #define SCP_MODEM             2     /*! Modem */
 #define SCP_TIMERS            3     /*! Timers */
 #define SCP_INIT              4     /*! Init */
@@ -113,6 +113,14 @@ File Number Defines
 #define SCP_CUSTOM            66    /*! Custom */
 #define SCP_LIN               67    /*! LIN */
 #define SCP_WLPERSIST         68    /*! WL Persist */
+#define SCP_GEOLOC            69    /*! Geoloc */
+#define SCP_I2C               70    /*! I2C */
+#define SCP_SPIFLASH          71    /*! SPI Flash */
+#define SCP_FLASHSTORAGE      72    /*! Flash Storage */
+#define SCP_SBS               73    /*! SBS Sending */
+#define SCP_ACC_AUTOCAL       74    /*! ACC Auto Cal */
+#define SCP_I0                75    /*! I0 */
+
 //</FILENUMBERS>
 
 /***************************************************************************
