@@ -40,6 +40,7 @@ Error Description ID Defines
 #define EID2_16   DU2|3,FLDSTR /*! INPUT B not Configured */
 #define EID2_17   DU2|4,FLDSTR /*! INPUT C not Configured */
 #define EID2_18   DU2|5,FLDSTR /*! INPUT D not Configured */
+#define EID2_19   DU2|19,FLDSTR /*! INPUT E not configured */
 //</ERROR_IDS>
  
 #endif // SCP_DBGERRORDEFINESDUDU2_H

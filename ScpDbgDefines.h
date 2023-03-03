@@ -112,6 +112,7 @@ File Number Defines
 #define SCP_FREERTOS          65    /*! FreeRTOS Main */
 #define SCP_CUSTOM            66    /*! Custom */
 #define SCP_LIN               67    /*! LIN */
+#define SCP_WLPERSIST         68    /*! WL Persist */
 //</FILENUMBERS>
 
 /***************************************************************************
